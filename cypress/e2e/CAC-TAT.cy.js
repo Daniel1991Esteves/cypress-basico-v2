@@ -10,11 +10,11 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       cy.title().should('be.equal','Central de Atendimento ao Cliente TAT')
     })
 
-    it('Preenche os campos obrigatórios e envia o formulário', function(){
+    it.only('Preenche os campos obrigatórios e envia o formulário', function(){
         const longText = 'Teste para validar teste, Teste para validar teste, Teste para validar teste, Teste para validar teste, Teste para validar teste, Teste para validar teste'
         cy.get('#firstName').type('Daniel')
         cy.get('#lastName').type('Esteves')
-        cy.get('#email').type('aa')
+        cy.get('#email').type('aa@aa.a')
         cy.get('#open-text-area').type(longText, {delay:120})
         //cy.get('button[type="submit"]').click()
         cy.contains('button', 'Enviar').click();
