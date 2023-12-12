@@ -10,7 +10,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       cy.title().should('be.equal','Central de Atendimento ao Cliente TAT')
     })
 
-    it.only('Preenche os campos obrigatórios e envia o formulário', function(){
+    it('Preenche os campos obrigatórios e envia o formulário', function(){
         const longText = 'Teste para validar teste, Teste para validar teste, Teste para validar teste, Teste para validar teste, Teste para validar teste, Teste para validar teste'
         cy.get('#firstName').type('Daniel')
         cy.get('#lastName').type('Esteves')
